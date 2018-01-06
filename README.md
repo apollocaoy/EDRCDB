@@ -26,7 +26,7 @@ Sourceforge.net : http://prdownloads.sourceforge.net/appserv/appserv-win32-2.6.0
 MD5SUM : e3a108c9b17f3572e53c07f52d236481
 
 
-%%%%%@@@@@System Configration@@@@@%%%%%
+@@@@@System Configration@@@@@
 
 重装AppServe
 设置字符集：gbk_simplified chinese
@@ -36,7 +36,7 @@ MySQL和phpMyAdmin
 根用户：root
 根密码：123
 
-%%%%%@@@@@CharSet Configration@@@@@%%%%%
+@@@@@CharSet Configration@@@@@
 
 对应的根文件关键配置显示如下：
 [client]
@@ -62,7 +62,7 @@ default-character-set = gbk
 	select @@version;
 		5.0.51b-community-nt-log
 
-%%%%%@@@@@消除简体中文乱码@@@@@%%%%%%
+@@@@@消除简体中文乱码@@@@@
 
 @所有HTML网页编码均为UTF-8
 @所有php文件Header头都声明为UTF-8
@@ -113,6 +113,6 @@ init_connect = 'SET NAMES gbk'
 # The default storage engine that will be used when create new tables when
 #default-storage-engine=INNODB
 
-@@@@@@%%%%%%phpMyAdmin字符集@@@@@@%%%%%%
+@@@@@@phpMyAdmin  CharSet Configration@@@@@@
 
 ALTER DATABASE `caoyong` DEFAULT CHARACTER SET gb2312 COLLATE gb2312_chinese_ci;
