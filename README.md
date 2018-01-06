@@ -29,11 +29,17 @@ MD5SUM : e3a108c9b17f3572e53c07f52d236481
 @@@@@System Configration@@@@@
 
 重装AppServe
-设置字符集：gbk_simplified chinese
+
+设置字符集：
+
+gbk_simplified chinese
+
 enabled：InnoDB ： 勾选（Yes）
 
 MySQL和phpMyAdmin
+
 根用户：root
+
 根密码：123
 
 @@@@@CharSet Configration@@@@@
@@ -63,6 +69,7 @@ default-character-set = gbk
 		5.0.51b-community-nt-log
 
 @@@@@消除简体中文乱码@@@@@
+
 
 @所有HTML网页编码均为UTF-8
 
