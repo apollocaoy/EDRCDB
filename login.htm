@@ -1,0 +1,221 @@
+<? php include_once 'conn.php';
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <title>抗震减灾信息管理系统-系统登录</title>
+    <meta content="IE=7.0000" http-equiv="X-UA-Compatible">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+ 
+    <script type="text/javascript" > </script>
+    <style type="text/css">
+    
+    	html, body {
+			margin: 0px;
+			padding: 0px;
+			color: #666666;
+			font-family: "微软雅黑",verdana,tahoma,arial,SimSun;
+			font-size: 16px;
+			clear: both;
+		}
+		
+		* {
+			
+			margin-top: 5px;
+			margin-bottom: 2px;
+		}
+		
+		ul, ol, li, p, dl, form {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		a {
+			color: #27AEF2;
+			text-decoration: none;
+			outline: none;
+			cursor: pointer;
+		}
+			
+ 		* h4 {
+			font-size: 20px;
+			line-height: 45px;
+		}
+
+		#hd{
+			width: 1200px;
+			height: 50px;
+			padding: 10px 20px 10px 20px;
+			border-bottom: 1px solid #CCCCCC;
+			margin: 0px auto;
+			
+		}
+
+		.container {
+			width: 560px;
+			height: 100%;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			float: none;
+			margin: 100px auto;
+		}
+
+		
+		* .boxer {
+			width: 560px;
+		}
+			
+		.clear {
+			clear: both;
+			width: 562px;
+		}
+		
+		
+				
+		#footer {
+			width: 1200px;
+			padding: 10px 20px 10px 20px;
+			border-top: 1px solid #CCCCCC;
+			margin: 0 auto;
+			height:50px;
+		}
+		
+		* .leftbox {
+			float: left;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		
+		* .rightbox {
+			float: right;
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+		
+		* .cr03 {
+			color: #666666;
+		}
+		
+		#footer a {
+			color: #666666;
+		}
+		
+		* .cr03 {
+			color: #666666;
+		}
+		
+				
+		* .txt {
+			border: 1px solid #BABABA;
+			color: #212121;
+			font-family: "Microsoft Yahei",Verdana,Simsun,"Segoe UI","Segoe UI Web Regular","Segoe UI Symbol","Helvetica Neue","BBAlpha Sans","S60 Sans",Arial,"sans-serif";
+			font-size: 100%;
+			padding: 4px 8px;
+			height: 35px;
+			width: 540px;
+			margin-bottom: 10px;
+			line-height: 35px;
+		}
+		
+		* .submit {
+			cursor: pointer;
+			background: #27AEF2;
+			color: #FFFFFF;
+			border: 1px none;
+			font-family: "Microsoft Yahei",Verdana,Simsun,"Segoe UI Web Semibold","Segoe UI Web Regular","Segoe UI","Segoe UI Symbol","Helvetica Neue",Arial;
+			height: 3em;
+			min-width: 100px;
+			padding: 10px 15px 10px;
+			font-size: 16px;
+			margin-right: 5px;
+		}
+		
+		* .mn02 {
+			margin: 20px 0px 25px 0;
+		}
+		
+		* .mn01 {
+			margin-top: 20px;
+		}
+		
+		*.line{width:1200px;
+			margin-top:5px;
+			margin-bottom:5px;
+			border-bottom:2px;
+			border-bottom-color:#0033FF;
+		}
+				
+	</style>
+    
+    <script type="text/javascript">
+		
+		function IsEnter()
+		{
+		   event=event || window.event;
+		   if(event.keyCode==13){
+			   //获取Enter的事件
+			   submitForm();
+		   }
+		}
+	
+		function submitForm()
+		{
+			var txtbox = document.forms['login'];
+			if(txtbox.username.value.length == 0)
+			{
+				alert('用户名不能为空');
+				form.username.focus(); 
+				return false;
+			}
+			if(txtbox.password.value.length == 0)
+			{
+				alert('密码不能为空'); 
+				form.password.focus(); 
+				return false;
+			}
+			document.login.Submit.click();
+		}
+
+	</script>
+    
+</head>
+<body>
+
+<div id="hd" >		
+	<div align="right">
+		<h2 style="font-family:"宋体">		
+			<span style="float:left"><a href="login.htm" target="_blank" >抗震减灾信息管理系统&nbsp;|&nbsp;中国地质大学（北京）</a></span>
+		</h2>	 	    	
+	</div>
+</div>
+
+<div class="container">
+           
+    <div class="clear"> 
+		<h4 style="text-align:left" class="submit">登录</h4>
+    </div>
+    <p>&nbsp;</p>
+        
+    <form action="login.php" id="login" name="login" method="post">
+          	<p>
+            	<span>用户名：</span>
+            	<input type="text" class="txt a-login bd03" name="username" id="username" placeholder="请输入用户名" >
+          	</p>
+			<p>
+            	<span>密码：</span>
+            	<input type="text" class="txt a-login bd03" name="password" id="password" placeholder="请输入密码" >
+            </p>
+			<p>
+   	 	  		<div align="center">
+		  			<input type="submit" class="submit mn02" value="登录" name="Submit" onclick="submitForm()" />
+       	    		<input  type="reset" class="submit mn02" value="重置" name="reset" onclick="submitForm()">
+				</div>
+            </p>
+			<div class="line" ></div> 
+	</form>
+</div>
+<div id="footer" >		
+	<div align="center">
+	</div>
+</div>
+</body>
+</html>

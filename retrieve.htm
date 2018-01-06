@@ -1,0 +1,850 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <title>抗震减灾信息管理系统-管理首页</title>
+    <meta content="IE=7.0000" http-equiv="X-UA-Compatible">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+ 
+    <script type="text/javascript" > </script>
+    
+    <style type="text/css">
+    
+    	html, body {
+			margin: 0px;
+			padding: 0px;
+			color: #666666;
+			font-family: "微软雅黑",verdana,tahoma,arial,SimSun;
+			font-size: 16px;
+			clear: both;
+		}
+		
+		* {
+			
+			margin-top: 5px;
+			margin-bottom: 2px;
+		}
+		
+		ul, ol, li, p, dl, form {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		a {
+			color: #27AEF2;
+			text-decoration: none;
+			outline: none;
+			cursor: pointer;
+		}
+		
+		* h2{
+			font-size: 30px;
+			line-height: 45px;
+			font-family: "Microsoft Yahei";
+			}
+			
+ 		* h4 {
+			font-size: 20px;
+			line-height: 45px;
+		}
+
+		#hd{
+			width: 1200px;
+			height: 50px;
+			padding: 10px 20px 10px 20px;
+			border-bottom: 1px solid #CCCCCC;
+			margin: 0px auto;
+			
+		}
+
+		.container {
+	width: 1200px;
+	height: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: none;
+	margin: 20px auto;
+		}
+
+		
+		* .boxer {
+			width: 560px;
+		}
+			
+		.clear {
+			clear: both;
+			width: 100%;
+		}
+				
+		#footer {
+			width: 100%;
+			padding: 10px 20px;
+			border-top: 1px solid #CCCCCC;
+			margin: 200px;
+			float: inherit;
+		}
+		
+		* .leftbox {
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+		}
+		
+		* .rightbox {
+	float: right;
+	margin-right: 20px;
+	margin-left: 20px;
+		}
+		
+		* .cr03 {
+			color: #666666;
+		}
+		
+		#footer a {
+			color: #666666;
+		}
+		
+		* .cr03 {
+			color: #666666;
+		}
+		
+				
+		* .txt {
+			border: 1px solid #BABABA;
+			color: #212121;
+			font-family: "Microsoft Yahei",Verdana,Simsun,"Segoe UI","Segoe UI Web Regular","Segoe UI Symbol","Helvetica Neue","BBAlpha Sans","S60 Sans",Arial,"sans-serif";
+			font-size: 100%;
+			padding: 4px 8px;
+			height: 35px;
+			width: 540px;
+			margin-bottom: 10px;
+			line-height: 35px;
+		}
+		
+				
+		* .submit {
+	cursor: pointer;
+	background: #27AEF2;
+	color: #FFFFFF;
+	border: 1px none;
+	font-family: "Microsoft Yahei",Verdana,Simsun,"Segoe UI Web Semibold","Segoe UI Web Regular","Segoe UI","Segoe UI Symbol","Helvetica Neue",Arial;
+	height: 3em;
+	min-width: 100px;
+	padding: 10px 15px 10px;
+	font-size: 16px;
+	margin-right: 5px;
+		}
+		
+		* .mn02 {
+			margin: 20px 0px 25px 0;
+		}
+		
+		* .mn01 {
+			margin-top: 20px;
+		}
+		
+		*.line{width:1200px;
+				margin-top:5px;
+				margin-bottom:5px;
+				border-bottom:2px;
+				border-bottom-color:#0033FF;
+				}
+				
+		
+			
+    </style>
+    
+    <script type="text/javascript">
+		
+		
+	
+		function IsEnter()
+		{
+		   event=event || window.event;
+		   if(event.keyCode==13){
+			   //获取Enter的事件
+			   submitForm();
+		   }
+		}
+	
+	
+		function submitForm01()
+		{
+			var txtbox = document.forms['retain01'];
+			if(txtbox.anlibianhao.value.length == 0)
+			{
+				alert('案例编号不能为空'); 
+				return false;
+			}
+			if(txtbox.anlimingcheng.value.length == 0)
+			{
+				alert('案例名称不能为空'); 
+				return false;
+			}
+			document.retain.retain01.click();
+		}
+
+		
+		
+	</script>
+    
+</head>
+<body>
+
+<div id="hd" >		
+	
+	<div align="right"  >
+		<h2 style="font-family:"宋体">		
+			<span style="float:left"><a href="retain.htm" target="_blank" >抗震减灾信息管理系统&nbsp;|&nbsp;中国地质大学（北京）</a></span>
+		</h2>	 	    	
+	</div>
+</div>
+
+<div class="container">
+  <div class="leftbox boxer pd01">
+	 	<div class="clear" > 
+			<h2 style="text-align:right" class="submit">案例检索</h2>
+        </div>
+        <p>&nbsp;</p>
+        
+        <div class="clear"> 
+			<h4 style="text-align:right" class="submit">案例标识信息</h4>
+        </div>
+        <p>&nbsp;</p>
+        
+        <form action="retain01.php" id="retain01" name="retain01" method="post">
+          <p>
+            	<span>案例编号：</span><input type="text" class="txt a-login bd03" name="anlibianhao" id="anlibianhao" placeholder="请输案例编号" >
+          </p>
+			 <p>
+            	<span>案例名称：</span><input type="text" class="txt a-login bd03" name="anlimingcheng" id="anlimingcheng" placeholder="请输入例名称" >
+            </p>
+			
+			<p>
+       	  <div align="center" >
+		  	
+       	    <input type="submit" class="submit mn02" value="检索" name="retain01" onclick="submitForm01()">
+			<input  type="reset" class="submit mn02" value="重置" name="reset" onclick="submitForm01()">
+		  </div>
+            </p>
+	<div class="fengexian" ></div> 
+	
+	 <div class="clear"> 
+			<h4 style="text-align:right" class="submit">地震基本信息</h4>
+        </div>
+        </form>
+		 <form action="retain02.php" id="retain02" name="retain02" method="post">
+          	<p>
+            	<span>案例编号：</span><input class="txt a-login bd03" name="anlibianhao" id="anlibianhao" placeholder="请输入案例编号" type="text">
+           	</p>
+			 <p>
+            	<span>时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区：</span><input class="txt a-login bd03" name="shiqu" id="shiqu" placeholder="请输入时区" type="text">
+            </p>
+			 <p>
+            	<span>震发日期：</span><input class="txt a-login bd03" name="zhenfariqi" id="zhenfariqi" placeholder="英文半角，格式如2015-01-01" type="text">
+            </p>
+            <p>
+            	<span>震发时间：</span><input class="txt a-login bd03" name="zhenfashijain" id="zhenfashijain" placeholder="英文半角，格式如2015-01-01 20:30:40" >
+            </p>
+			 <p>
+            	<span>经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span><input class="txt a-login bd03" name="jingdu" id="jingdu" placeholder="请输入经度值" >
+            </p>
+			<p>
+            	<span>纬&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span><input type="text" class="txt a-login bd03" name="weidu" id="weidu" placeholder="请输入纬度值">
+            </p>
+			<p>
+            	<span>海&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;拔：</span><input class="txt a-login bd03" name="haiba" id="haiba" placeholder="请输入海拔高度值" >
+            </p>
+			<p>
+            	<span>行政区划：</span><input class="txt a-login bd03" name="xingzhengquhua" id="xingzhengquhua"   placeholder="请说明所在行政区" >
+            </p>
+            <p>
+            	<span>震中位置：</span><input class="txt a-login bd03" name="zhengzhongweizhi" id="zhengzhongweizhi"  placeholder="请说明震中位置" >
+            </p>
+            <p>
+            	<span>受影响地域范围：</span><input class="txt a-login bd03" name="shouyingxiangdiyufanwei" id="shouyingxiangdiyufanwei" placeholder="请说明受影响地域范围" >
+            </p>
+            <p>
+            	<span>震&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级：</span><input class="txt a-login bd03" name="zhenji" id="zhenji" placeholder="请输入震级参数" type="text">
+           	</p>
+			 <p>
+            	<span>震源深度：</span><input class="txt a-login bd03" name="zhenyuanshendu" id="zhenyuanshendu" placeholder="请输入震源深度参数" type="text">
+            </p>
+			 <p>
+            	<span>震中烈度：</span><input class="txt a-login bd03" name="zhenzhongliedu" id="zhenzhongliedu" placeholder="请输入震中烈度参数" type="text">
+            </p>
+			<p>
+       	  <div align="center">
+				
+       	    <input type="submit" class="submit mn02" value="检索" name="retain02" onclick="submitForm01()">
+			<input  type="reset" class="submit mn02" value="重置" name="reset" onclick="submitForm01()">
+		  </div>
+            </p>
+        </form>
+		
+		 <div class="clear"> 
+			<h4 style="text-align:right" class="submit">地震震情描述</h4>
+        </div>
+        </form>
+		 <form action="retain03.php" id="retain03" name="retain03" method="post">
+          	<p>
+            	<span>案例编号：</span><input class="txt a-login bd03" name="anlibianhao" id="anlibianhao" placeholder="请输入案例编号" type="text">
+            </p>
+			 <p>
+            	<span>时距：</span><input class="txt a-login bd03" name="shiju" id="shiju" placeholder="格式：英文半角；示例：2015-01-01 20:30:40" type="text">
+            </p>
+            <p>
+            	<span>所描述地域或行政区：</span><input class="txt a-login bd03" name="suomiaoshudiyuhuoxingzhengqu" id="suomiaoshudiyuhuoxingzhengqu" placeholder="请说明所描述地域或行政区" type="text">
+           	</p>
+			 <p>
+            	<span>汇报机构或人员：</span><input class="txt a-login bd03" name="huibaojigouhuorenyuan" id="huibaojigouhuorenyuan" placeholder="请说明汇报机构或人员" type="text">
+            </p>
+			 <p>
+            	<span>死亡人数：</span><input class="txt a-login bd03" name="siwangrenshu" id="siwangrenshu" placeholder="请汇报死亡人数" type="text">
+            </p>
+			<p>
+            	<span>受伤人数：</span><input type="text" class="txt a-login bd03" name="shoushangrenshu" id="shoushangrenshu" placeholder="请汇报受伤人数">
+            </p>
+			<p>
+            	<span>失踪人数：</span><input class="txt a-login bd03" name="shizongrenshu" id="shizongrenshu" placeholder="请汇报失踪人数" type="text">
+           	</p>
+			 <p>
+            	<span>彻底摧毁房屋数：</span><input class="txt a-login bd03" name="chedicuhuifangwushu" id="chedicuhuifangwushu" placeholder="请汇报彻底摧毁房屋数" type="text">
+            </p>
+			 <p>
+            	<span>严重受损房屋数：</span><input class="txt a-login bd03" name="yanzhongshousunfangwushu" id="yanzhongshousunfangwushu" placeholder="请汇报严重受损房屋数" type="text">
+            </p>
+            <p>
+            	<span>轻微受损房屋数：</span><input class="txt a-login bd03" name="qingweishousunfangwushu" id="qingweishousunfangwushu" placeholder="请汇报轻微受损房屋数" type="text">
+           	</p>
+			 <p>
+            	<span>直接经济损失：</span><input class="txt a-login bd03" name="zhijiejingjisunshi" id="zhijiejingjisunshi" placeholder="请汇报直接经济损失" type="text">
+            </p>
+			 <p>
+            	<span>间接经济损失：</span><input class="txt a-login bd03" name="jianjiejingjisunshi" id="jianjiejingjisunshi" placeholder="请汇报间接经济损失" type="text">
+            </p>
+            <p>
+            	<span>交通基础设施状态：</span><input class="txt a-login bd03" name="jiaotongjichusheshizhuangtai" id="jiaotongjichusheshizhuangtai" placeholder="请汇报交通基础设施状态" type="text">
+           	</p>
+			 <p>
+            	<span>通讯基础设施状态：</span><input class="txt a-login bd03" name="tongxunjichusheshizhuangtai" id="tongxunjichusheshizhuangtai" placeholder="请汇报通讯基础设施状态" type="text">
+            </p>
+			 <p>
+            	<span>生产生活秩序：</span><input class="txt a-login bd03" name="shengchanshenghuozhixu" id="shengchanshenghuozhixu" placeholder="请汇报生产生活秩序状况" type="text">
+            </p>
+            <p>
+            	<span>市场经营秩序：</span><input class="txt a-login bd03" name="shichangjingjizhixu" id="shichangjingjizhixu" placeholder="请汇报市场经营秩序状况" type="text">
+           	</p>
+			 <p>
+            	<span>受困人员集中地点：</span><input class="txt a-login bd03" name="shoukunrenyuanjizhongdidian" id="shoukunrenyuanjizhongdidian" placeholder="请上报受困人员集中地点" type="text">
+            </p>
+			 <p>
+            	<span>待解救人员数估计：</span><input class="txt a-login bd03" name="daijiejiurenshuguji" id="daijiejiurenshuguji" placeholder="请上报待解救人员数估计值" type="text">
+            </p>
+            <p>
+            	<span>已解救人员数：</span><input class="txt a-login bd03" name="yijiejiurenyuanshu" id="yijiejiurenyuanshu" placeholder="请上报已解救人员数" type="text">
+           	</p>
+			 <p>
+            	<span>需转移安置人数估计：</span><input class="txt a-login bd03" name="xuzhuanyianzhirenyuanshuguji" id="xuzhuanyianzhirenyuanshuguji" placeholder="请上报需转移安置人数估计" type="text">
+            </p>
+			 <p>
+            	<span>已转移安置人数：</span><input class="txt a-login bd03" name="yizhuanyianzhirenshu" id="yizhuanyianzhirenshu" placeholder="请上报已转移安置人数" type="text">
+            </p>
+            <p>
+            	<span>滑坡状况：</span><input class="txt a-login bd03" name="huapozhuangkuang" id="huapozhuangkuang" placeholder="请汇报滑坡状况" type="text">
+           	</p>
+			 <p>
+            	<span>泥石流状况：</span><input class="txt a-login bd03" name="nishiliuzhuangkuang" id="nishiliuzhuangkuang" placeholder="请汇报泥石流状况" type="text">
+            </p>
+			 <p>
+            	<span>塌方塌陷状况：</span><input class="txt a-login bd03" name="taxiantafangzhuangkuang" id="taxiantafangzhuangkuang" placeholder="请汇报塌方塌陷状况" type="text">
+            </p>
+            <p>
+            	<span>崩塌滚石状况：</span><input class="txt a-login bd03" name="bentagunshizhuangkuang" id="bentagunshizhuangkuang" placeholder="请汇报崩塌滚石状况" type="text">
+           	</p>
+			 <p>
+            	<span>堰塞湖状况：</span><input class="txt a-login bd03" name="yasehuzhuangkuang" id="yasehuzhuangkuang" placeholder="请汇报堰塞湖状况" type="text">
+            </p>
+			 <p>
+            	<span>坝体开裂状况：</span><input class="txt a-login bd03" name="batikailiezhuangkuang" id="batikailiezhuangkuang" placeholder="请汇报坝体开裂状况" type="text">
+            </p>
+            <p>
+            	<span>桥梁破坏状况：</span><input class="txt a-login bd03" name="qiaoliangpohuaizhuangkuang" id="qiaoliangpohuaizhuangkuang" placeholder="请汇报桥梁破坏状况" type="text">
+           	</p>
+			 <p>
+            	<span>道路阻塞状况：</span><input class="txt a-login bd03" name="daoluzusezhuangkuang" id="daoluzusezhuangkuang" placeholder="请输入震源深度参数" type="text">
+            </p>
+			 <p>
+            	<span>电站状况：</span><input class="txt a-login bd03" name="dianzhanzhuangkuang" id="dianzhanzhuangkuang" placeholder="请汇报电站状况" type="text">
+            </p>
+            <p>
+            	<span>水坝状况：</span><input class="txt a-login bd03" name="shuibazhuangkuang" id="shuibazhuangkuang" placeholder="请汇报水坝状况" type="text">
+           	</p>
+			 <p>
+            	<span>供水系统状态：</span><input class="txt a-login bd03" name="gongshuixitongzhuangtai" id="gongshuixitongzhuangkuang" placeholder="请说明供水系统状态" type="text">
+            </p>
+			 <p>
+            	<span>电力系统状态：</span><input class="txt a-login bd03" name="dianlixitongzhuangtai" id="dianlixitongzhuangkuang" placeholder="请说明电力系统状态" type="text">
+            </p>
+            <p>
+            	<span>热力系统状态：</span><input class="txt a-login bd03" name="relixitongzhuangtai" id="relixitongzhuangkuang" placeholder="请说明热力系统状态" type="text">
+           	</p>
+			 <p>
+            	<span>燃气系统状态：</span><input class="txt a-login bd03" name="ranqixitongzhuangtai" id="ranqixitongzhuangkuang" placeholder="请说明燃气系统状态" type="text">
+            </p>
+			 <p>
+            	<span>排水系统状态：</span><input class="txt a-login bd03" name="paishuixitongzhuangtai" id="paishuixitongzhuangtai" placeholder="请说明排水系统状态" type="text">
+            </p>
+            <p>
+            	<span>供水系统状态：</span><input class="txt a-login bd03" name="gongshuixitongzhuangtai" id="gongshuixitongzhuangtai" placeholder="请说明供水系统状态" type="text">
+            </p>
+			 <p>
+            	<span>电力系统状态：</span><input class="txt a-login bd03" name="dianlixitongzhuangtai" id="dianlixitongzhuangtai" placeholder="请说明电力系统状态" type="text">
+            </p>
+            <p>
+            	<span>城市道路系统状态：</span><input class="txt a-login bd03" name="chengshidaoluxitongzhuangtai" id="chengshidaoluxitongzhuangtai" placeholder="请说明城市道路系统状态" type="text">
+           	</p>
+			 <p>
+            	<span>轨道交通系统状态：</span><input class="txt a-login bd03" name="guidaojiaotongxitongzhuangtai" id="guidaojiaotongxitongzhuangtai" placeholder="请说明轨道交通系统状态" type="text">
+            </p>
+			 <p>
+            	<span>医疗系统状态：</span><input class="txt a-login bd03" name="yiliaoxitongzhuangtai" id="yiliaoxitongzhuangtai" placeholder="请说明医疗系统状态" type="text">
+            </p>
+             <p>
+            	<span>通信服务状态：</span><input class="txt a-login bd03" name="tongxinfuwuzhuangtai" id="tongxinfuwuzhuangtai" placeholder="请说明通信服务状态" type="text">
+            </p>
+             <p>
+            	<span>广播电视服务状态：</span><input class="txt a-login bd03" name="guangbodianshifuwuzhuangtai" id="guangbodianshifuwuzhuangtai" placeholder="请说明广播电视服务状态" type="text">
+            </p>
+             <p>
+            	<span>电力系统状态：</span><input class="txt a-login bd03" name="dianlixitongzhuangtai" id="dianlixitongzhuangtai" placeholder="请说明电力系统状态" type="text">
+            </p>
+             <p>
+            	<span>互联网服务状态：</span><input class="txt a-login bd03" name="hulianwangfuwuzhuangtai" id="hulianwangfuwuzhuangtai" placeholder="请说明互联网服务状态" type="text">
+            </p>
+             <p>
+            	<span>银行服务状态：</span><input class="txt a-login bd03" name="yinhangfuwuzhuangtai" id="yinhangfuwuzhuangtai" placeholder="请说明银行服务状态" type="text">
+            </p>
+             <p>
+            	<span>客运服务状态：</span><input class="txt a-login bd03" name="keyunfuwuzhuangtai" id="keyunfuwuzhuangtai" placeholder="请说明客运服务状态" type="text">
+            </p>
+            
+             <p>
+            	<span>邮政服务状态：</span><input class="txt a-login bd03" name="youzhengfuwuzhuangtai" id="youzhengfuwuzhuangtai" placeholder="请说明邮政服务状态" type="text">
+            </p>
+             <p>
+            	<span>天气：</span><input class="txt a-login bd03" name="tianqi" id="tianqi" placeholder="请说明天气状况" type="text">
+            </p>
+             <p>
+            	<span>气温：</span><input class="txt a-login bd03" name="qiwen" id="qiwen" placeholder="请说明气温状况" type="text">
+            </p>
+             <p>
+            	<span>湿度：</span><input class="txt a-login bd03" name="shidu" id="shidu" placeholder="请说明湿度状况" type="text">
+            </p>
+             <p>
+            	<span>降水概率：</span><input class="txt a-login bd03" name="jiangshuigailv" id="jiangshuigailv" placeholder="请说明降水概率状况" type="text">
+            </p>
+             <p>
+            	<span>空气质量：</span><input class="txt a-login bd03" name="kongqizhiliang" id="kongqizhiliang" placeholder="请说明空气质量状况" type="text">
+            </p>
+            
+		<p>
+       	  <div align="center">
+				<input class="submit mn02" value="保存" name="retain03" onclick="submitForm03()" type="submit">
+				<input class="submit mn02" value="重置" name="reset" onclick="submitForm03()" type="reset">
+		  </div>
+        </p>
+        </form>
+		
+		 <div class="clear"> 
+			<h4 style="text-align:right" class="submit">抗震减灾措施</h4>
+        </div>
+        </form>
+		 <form action="retain04.php" id="retain04" name="retain04" method="post">
+          <p>
+            	<span>案例编号：</span><input class="txt a-login bd03" name="anlibiaohao" id="anlibiaohao" placeholder="请输入案例编号" type="text">
+           </p>
+			 <p>
+            	<span>时距（间）：</span><input class="txt a-login bd03" name="shiju" id="shiju" placeholder="请输入时距参数" type="text">
+            </p>
+			 <p>
+            	<span>应急响应行政级别及部门：</span><input class="txt a-login bd03" name="yjxyxzjbjbm" id="yjxyxzjbjbm" placeholder="请输入应急响应行政级别及部门" type="text">
+            </p>
+            <p>
+            	<span>组织自救互救：</span><input class="txt a-login bd03" name="zzzjhj" id="zzzjhj" placeholder="请汇报组织自救互救状况" type="text">
+           	</p>
+			 <p>
+            	<span>启动民兵预备役：</span><input class="txt a-login bd03" name="qdmbyby" id="qdmbyby" placeholder="请汇报启动民兵预备役状况" type="text">
+            </p>
+			 <p>
+            	<span>派遣部队军警：</span><input class="txt a-login bd03" name="pqbdjj" id="pqbdjj" placeholder="请汇报派遣部队军警状况" type="text">
+            </p>
+			<p>
+            	<span>转移安置群众：</span><input type="text" class="txt a-login bd03" name="zyazqz" id="zyazqz" placeholder="请汇报转移安置群众状况">
+            </p>
+			<p>
+            	<span>派送救灾物资：</span><input class="txt a-login bd03" name="psjzwz" id="psjzwz" placeholder="请汇报派送救灾物资状况" type="text">
+           	</p>
+			 <p>
+            	<span>划拨救灾资金：</span><input class="txt a-login bd03" name="hbjzzj" id="hbjzzj" placeholder="请汇报划拨救灾资金状况" type="text">
+            </p>
+			 <p>
+            	<span>派遣工程抢险队：</span><input class="txt a-login bd03" name="pqgcqxd" id="pqgcqxd" placeholder="请汇报派遣工程抢险队状况" type="text">
+            </p>
+            <p>
+            	<span>救治伤员病人：</span><input class="txt a-login bd03" name="jzsybr" id="jzsybr" placeholder="请汇报救治伤员病人状况" type="text">
+           	</p>
+			 <p>
+            	<span>生产生活秩序恢复：</span><input class="txt a-login bd03" name="scshzxhf" id="scshzxhf" placeholder="请汇报生产生活秩序恢复状况" type="text">
+            </p>
+			 <p>
+            	<span>市场经营秩序恢复：</span><input class="txt a-login bd03" name="scjyzxhf" id="scjyzxhf" placeholder="请汇报市场经营秩序恢复状况" type="text">
+            </p>
+            <p>
+            	<span>公共事业和公共服务恢复：</span><input class="txt a-login bd03" name="ggsyhggfwhf" id="ggsyhggfwhf" placeholder="请汇报公共事业和公共服务恢复状况" type="text">
+            </p>
+            <p>
+            	<span>基础设施恢复：</span><input class="txt a-login bd03" name="jcsshf" id="jcsshf" placeholder="请汇报基础设施恢复状况" type="text">
+            </p>
+            <p>
+            	<span>市政设施恢复：</span><input class="txt a-login bd03" name="szsshf" id="szsshf" placeholder="请汇报市政设施恢复状况" type="text">
+            </p>
+            <p>
+            	<span>实施重建项目：</span><input class="txt a-login bd03" name="sscjxm" id="sscjxm" placeholder="请汇报实施重建项目状况" type="text">
+            </p>
+		<p>
+       	  <div align="center">
+				<input class="submit mn02" value="保存" name="retain04" onclick="submitForm04()" type="submit">
+				<input class="submit mn02" value="重置" name="reset" onclick="submitForm04()" type="reset">
+		  </div>
+        </p>
+        </form>
+		
+        <p>&nbsp;</p>
+     
+    </div>
+ <div class="rightbox boxer pd01">
+		<div class="clear"> 
+			<h4 style="text-align:left" class="submit">案例显示</h4>
+        </div>
+        <p>&nbsp;</p>
+        
+        <div class="clear"> 
+			<h4 style="text-align:left" class="submit">案例标识信息</h4>
+        </div>
+        <p>&nbsp;</p>
+        
+                <form action="retain01.php" id="retain01" name="retain01" method="post">
+          <p>
+            	<span>案例编号：</span><input type="text" class="txt a-login bd03" name="anlibianhao" id="anlibianhao" >
+          </p>
+			 <p>
+            	<span>案例名称：</span><input type="text" class="txt a-login bd03" name="anlimingcheng" id="anlimingcheng" >
+            </p>
+			
+			<p>
+       	  <div align="center" >
+		  	<input type="submit" class="submit mn02" value="修正" name="retain01" onclick="submitForm01()" >
+       	   	<input  type="reset" class="submit mn02" value="重置" name="reset" onclick="submitForm01()">
+		  </div>
+            </p>
+	<div class="fengexian" ></div> 
+	
+	 <div class="clear"> 
+			<h4 style="text-align:left" class="submit">地震基本信息</h4>
+        </div>
+        </form>
+		 <form action="retain02.php" id="retain02" name="retain02" method="post">
+          	<p>
+            	<span>案例编号：</span><input class="txt a-login bd03" name="anlibianhao" id="anlibianhao" type="text">
+           	</p>
+			 <p>
+            	<span>时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区：</span><input class="txt a-login bd03" name="shiqu" id="shiqu"  type="text">
+            </p>
+			 <p>
+            	<span>震发日期：</span><input class="txt a-login bd03" name="zhenfariqi" id="zhenfariqi" type="text">
+            </p>
+            <p>
+            	<span>震发时间：</span><input class="txt a-login bd03" name="zhenfashijain" id="zhenfashijain" >
+            </p>
+			 <p>
+            	<span>经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span><input class="txt a-login bd03" name="jingdu" id="jingdu" >
+            </p>
+			<p>
+            	<span>纬&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span><input type="text" class="txt a-login bd03" name="weidu" id="weidu" >
+            </p>
+			<p>
+            	<span>海&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;拔：</span><input class="txt a-login bd03" name="haiba" id="haiba" >
+            </p>
+			<p>
+            	<span>行政区划：</span><input class="txt a-login bd03" name="xingzhengquhua" id="xingzhengquhua"   >
+            </p>
+            <p>
+            	<span>震中位置：</span><input class="txt a-login bd03" name="zhengzhongweizhi" id="zhengzhongweizhi"  >
+            </p>
+            <p>
+            	<span>受影响地域范围：</span><input class="txt a-login bd03" name="shouyingxiangdiyufanwei" id="shouyingxiangdiyufanwei" >
+            </p>
+            <p>
+            	<span>震&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级：</span><input class="txt a-login bd03" name="zhenji" id="zhenji"  type="text">
+           	</p>
+			 <p>
+            	<span>震源深度：</span><input class="txt a-login bd03" name="zhenyuanshendu" id="zhenyuanshendu"  type="text">
+            </p>
+			 <p>
+            	<span>震中烈度：</span><input class="txt a-login bd03" name="zhenzhongliedu" id="zhenzhongliedu"  type="text">
+            </p>
+			<p>
+       	  <div align="center">
+				<input class="submit mn02" value="修正" name="retain02" onclick="submitForm02()" type="submit">
+				<input class="submit mn02" value="重置" name="reset" onclick="submitForm02()" type="reset">
+		  </div>
+            </p>
+        </form>
+		
+		 <div class="clear"> 
+			<h4 style="text-align:left" class="submit">地震震情描述</h4>
+        </div>
+        </form>
+		 <form action="retain03.php" id="retain03" name="retain03" method="post">
+          	<p>
+            	<span>案例编号：</span><input class="txt a-login bd03" name="anlibianhao" id="anlibianhao" type="text">
+            </p>
+			 <p>
+            	<span>时距：</span><input class="txt a-login bd03" name="shiju" id="shiju" type="text">
+            </p>
+            <p>
+            	<span>所描述地域或行政区：</span><input class="txt a-login bd03" name="suomiaoshudiyuhuoxingzhengqu" id="suomiaoshudiyuhuoxingzhengqu" type="text">
+           	</p>
+			 <p>
+            	<span>汇报机构或人员：</span><input class="txt a-login bd03" name="huibaojigouhuorenyuan" id="huibaojigouhuorenyuan" type="text">
+            </p>
+			 <p>
+            	<span>死亡人数：</span><input class="txt a-login bd03" name="siwangrenshu" id="siwangrenshu" type="text">
+            </p>
+			<p>
+            	<span>受伤人数：</span><input type="text" class="txt a-login bd03" name="shoushangrenshu" id="shoushangrenshu" >
+            </p>
+			<p>
+            	<span>失踪人数：</span><input class="txt a-login bd03" name="shizongrenshu" id="shizongrenshu" type="text">
+           	</p>
+			 <p>
+            	<span>彻底摧毁房屋数：</span><input class="txt a-login bd03" name="chedicuhuifangwushu" id="chedicuhuifangwushu" type="text">
+            </p>
+			 <p>
+            	<span>严重受损房屋数：</span><input class="txt a-login bd03" name="yanzhongshousunfangwushu" id="yanzhongshousunfangwushu" type="text">
+            </p>
+            <p>
+            	<span>轻微受损房屋数：</span><input class="txt a-login bd03" name="qingweishousunfangwushu" id="qingweishousunfangwushu" type="text">
+           	</p>
+			 <p>
+            	<span>直接经济损失：</span><input class="txt a-login bd03" name="zhijiejingjisunshi" id="zhijiejingjisunshi" type="text">
+            </p>
+			 <p>
+            	<span>间接经济损失：</span><input class="txt a-login bd03" name="jianjiejingjisunshi" id="jianjiejingjisunshi" type="text">
+            </p>
+            <p>
+            	<span>交通基础设施状态：</span><input class="txt a-login bd03" name="jiaotongjichusheshizhuangtai" id="jiaotongjichusheshizhuangtai" type="text">
+           	</p>
+			 <p>
+            	<span>通讯基础设施状态：</span><input class="txt a-login bd03" name="tongxunjichusheshizhuangtai" id="tongxunjichusheshizhuangtai" type="text">
+            </p>
+			 <p>
+            	<span>生产生活秩序：</span><input class="txt a-login bd03" name="shengchanshenghuozhixu" id="shengchanshenghuozhixu" type="text">
+            </p>
+            <p>
+            	<span>市场经营秩序：</span><input class="txt a-login bd03" name="shichangjingjizhixu" id="shichangjingjizhixu" type="text">
+           	</p>
+			 <p>
+            	<span>受困人员集中地点：</span><input class="txt a-login bd03" name="shoukunrenyuanjizhongdidian" id="shoukunrenyuanjizhongdidian" type="text">
+            </p>
+			 <p>
+            	<span>待解救人员数估计：</span><input class="txt a-login bd03" name="daijiejiurenshuguji" id="daijiejiurenshuguji" type="text">
+            </p>
+            <p>
+            	<span>已解救人员数：</span><input class="txt a-login bd03" name="yijiejiurenyuanshu" id="yijiejiurenyuanshu" type="text">
+           	</p>
+			 <p>
+            	<span>需转移安置人数估计：</span><input class="txt a-login bd03" name="xuzhuanyianzhirenyuanshuguji" id="xuzhuanyianzhirenyuanshuguji" type="text">
+            </p>
+			 <p>
+            	<span>已转移安置人数：</span><input class="txt a-login bd03" name="yizhuanyianzhirenshu" id="yizhuanyianzhirenshu" type="text">
+            </p>
+            <p>
+            	<span>滑坡状况：</span><input class="txt a-login bd03" name="huapozhuangkuang" id="huapozhuangkuang" type="text">
+           	</p>
+			 <p>
+            	<span>泥石流状况：</span><input class="txt a-login bd03" name="nishiliuzhuangkuang" id="nishiliuzhuangkuang" type="text">
+            </p>
+			 <p>
+            	<span>塌方塌陷状况：</span><input class="txt a-login bd03" name="taxiantafangzhuangkuang" id="taxiantafangzhuangkuang" type="text">
+            </p>
+            <p>
+            	<span>崩塌滚石状况：</span><input class="txt a-login bd03" name="bentagunshizhuangkuang" id="bentagunshizhuangkuang" type="text">
+           	</p>
+			 <p>
+            	<span>堰塞湖状况：</span><input class="txt a-login bd03" name="yasehuzhuangkuang" id="yasehuzhuangkuang" type="text">
+            </p>
+			 <p>
+            	<span>坝体开裂状况：</span><input class="txt a-login bd03" name="batikailiezhuangkuang" id="batikailiezhuangkuang" type="text">
+            </p>
+            <p>
+            	<span>桥梁破坏状况：</span><input class="txt a-login bd03" name="qiaoliangpohuaizhuangkuang" id="qiaoliangpohuaizhuangkuang" type="text">
+           	</p>
+			 <p>
+            	<span>道路阻塞状况：</span><input class="txt a-login bd03" name="daoluzusezhuangkuang" id="daoluzusezhuangkuang" type="text">
+            </p>
+			 <p>
+            	<span>电站状况：</span><input class="txt a-login bd03" name="dianzhanzhuangkuang" id="dianzhanzhuangkuang" type="text">
+            </p>
+            <p>
+            	<span>水坝状况：</span><input class="txt a-login bd03" name="shuibazhuangkuang" id="shuibazhuangkuang" type="text">
+           	</p>
+			 <p>
+            	<span>供水系统状态：</span><input class="txt a-login bd03" name="gongshuixitongzhuangtai" id="gongshuixitongzhuangkuang" type="text">
+            </p>
+			 <p>
+            	<span>电力系统状态：</span><input class="txt a-login bd03" name="dianlixitongzhuangtai" id="dianlixitongzhuangkuang" type="text">
+            </p>
+            <p>
+            	<span>热力系统状态：</span><input class="txt a-login bd03" name="relixitongzhuangtai" id="relixitongzhuangkuang" type="text">
+           	</p>
+			 <p>
+            	<span>燃气系统状态：</span><input class="txt a-login bd03" name="ranqixitongzhuangtai" id="ranqixitongzhuangkuang" type="text">
+            </p>
+			 <p>
+            	<span>排水系统状态：</span><input class="txt a-login bd03" name="paishuixitongzhuangtai" id="paishuixitongzhuangtai" type="text">
+            </p>
+            <p>
+            	<span>供水系统状态：</span><input class="txt a-login bd03" name="gongshuixitongzhuangtai" id="gongshuixitongzhuangtai" type="text">
+            </p>
+			 <p>
+            	<span>电力系统状态：</span><input class="txt a-login bd03" name="dianlixitongzhuangtai" id="dianlixitongzhuangtai" type="text">
+            </p>
+            <p>
+            	<span>城市道路系统状态：</span><input class="txt a-login bd03" name="chengshidaoluxitongzhuangtai" id="chengshidaoluxitongzhuangtai" type="text">
+           	</p>
+			 <p>
+            	<span>轨道交通系统状态：</span><input class="txt a-login bd03" name="guidaojiaotongxitongzhuangtai" id="guidaojiaotongxitongzhuangtai" type="text">
+            </p>
+			 <p>
+            	<span>医疗系统状态：</span><input class="txt a-login bd03" name="yiliaoxitongzhuangtai" id="yiliaoxitongzhuangtai" type="text">
+            </p>
+             <p>
+            	<span>通信服务状态：</span><input class="txt a-login bd03" name="tongxinfuwuzhuangtai" id="tongxinfuwuzhuangtai" type="text">
+            </p>
+             <p>
+            	<span>广播电视服务状态：</span><input class="txt a-login bd03" name="guangbodianshifuwuzhuangtai" id="guangbodianshifuwuzhuangtai" type="text">
+            </p>
+             <p>
+            	<span>电力系统状态：</span><input class="txt a-login bd03" name="dianlixitongzhuangtai" id="dianlixitongzhuangtai" type="text">
+            </p>
+             <p>
+            	<span>互联网服务状态：</span><input class="txt a-login bd03" name="hulianwangfuwuzhuangtai" id="hulianwangfuwuzhuangtai" type="text">
+            </p>
+             <p>
+            	<span>银行服务状态：</span><input class="txt a-login bd03" name="yinhangfuwuzhuangtai" id="yinhangfuwuzhuangtai" type="text">
+            </p>
+             <p>
+            	<span>客运服务状态：</span><input class="txt a-login bd03" name="keyunfuwuzhuangtai" id="keyunfuwuzhuangtai" type="text">
+            </p>
+            
+             <p>
+            	<span>邮政服务状态：</span><input class="txt a-login bd03" name="youzhengfuwuzhuangtai" id="youzhengfuwuzhuangtai" type="text">
+            </p>
+             <p>
+            	<span>天气：</span><input class="txt a-login bd03" name="tianqi" id="tianqi" type="text">
+            </p>
+             <p>
+            	<span>气温：</span><input class="txt a-login bd03" name="qiwen" id="qiwen" type="text">
+            </p>
+             <p>
+            	<span>湿度：</span><input class="txt a-login bd03" name="shidu" id="shidu" type="text">
+            </p>
+             <p>
+            	<span>降水概率：</span><input class="txt a-login bd03" name="jiangshuigailv" id="jiangshuigailv" type="text">
+            </p>
+             <p>
+            	<span>空气质量：</span><input class="txt a-login bd03" name="kongqizhiliang" id="kongqizhiliang" type="text">
+            </p>
+            
+		<p>
+       	  <div align="center">
+				<input class="submit mn02" value="修正" name="retain03" onclick="submitForm03()" type="submit">
+				<input class="submit mn02" value="重置" name="reset" onclick="submitForm03()" type="reset">
+		  </div>
+        </p>
+        </form>
+		
+		 <div class="clear"> 
+			<h4 style="text-align:left" class="submit">抗震减灾措施</h4>
+        </div>
+        </form>
+		 <form action="retain04.php" id="retain04" name="retain04" method="post">
+          <p>
+            	<span>案例编号：</span><input class="txt a-login bd03" name="anlibiaohao" id="anlibiaohao" type="text">
+           </p>
+			 <p>
+            	<span>时距（间）：</span><input class="txt a-login bd03" name="shiju" id="shiju" type="text">
+            </p>
+			 <p>
+            	<span>应急响应行政级别及部门：</span><input class="txt a-login bd03" name="yjxyxzjbjbm" id="yjxyxzjbjbm"  type="text">
+            </p>
+            <p>
+            	<span>组织自救互救：</span><input class="txt a-login bd03" name="zzzjhj" id="zzzjhj" type="text">
+           	</p>
+			 <p>
+            	<span>启动民兵预备役：</span><input class="txt a-login bd03" name="qdmbyby" id="qdmbyby" type="text">
+            </p>
+			 <p>
+            	<span>派遣部队军警：</span><input class="txt a-login bd03" name="pqbdjj" id="pqbdjj" type="text">
+            </p>
+			<p>
+            	<span>转移安置群众：</span><input type="text" class="txt a-login bd03" name="zyazqz" id="zyazqz" >
+            </p>
+			<p>
+            	<span>派送救灾物资：</span><input class="txt a-login bd03" name="psjzwz" id="psjzwz" type="text">
+           	</p>
+			 <p>
+            	<span>划拨救灾资金：</span><input class="txt a-login bd03" name="hbjzzj" id="hbjzzj" type="text">
+            </p>
+			 <p>
+            	<span>派遣工程抢险队：</span><input class="txt a-login bd03" name="pqgcqxd" id="pqgcqxd" type="text">
+            </p>
+            <p>
+            	<span>救治伤员病人：</span><input class="txt a-login bd03" name="jzsybr" id="jzsybr" type="text">
+           	</p>
+			 <p>
+            	<span>生产生活秩序恢复：</span><input class="txt a-login bd03" name="scshzxhf" id="scshzxhf" type="text">
+            </p>
+			 <p>
+            	<span>市场经营秩序恢复：</span><input class="txt a-login bd03" name="scjyzxhf" id="scjyzxhf" type="text">
+            </p>
+            <p>
+            	<span>公共事业和公共服务恢复：</span><input class="txt a-login bd03" name="ggsyhggfwhf" id="ggsyhggfwhf"  type="text">
+            </p>
+            <p>
+            	<span>基础设施恢复：</span><input class="txt a-login bd03" name="jcsshf" id="jcsshf" type="text">
+            </p>
+            <p>
+            	<span>市政设施恢复：</span><input class="txt a-login bd03" name="szsshf" id="szsshf" type="text">
+            </p>
+            <p>
+            	<span>实施重建项目：</span><input class="txt a-login bd03" name="sscjxm" id="sscjxm" type="text">
+            </p>
+		<p>
+       	  <div align="center">
+				<input class="submit mn02" value="修正" name="retain04" onclick="submitForm04()" type="submit">
+				<input class="submit mn02" value="重置" name="reset" onclick="submitForm04()" type="reset">
+		  </div>
+        </p>
+        </form>
+		
+        <p>&nbsp;</p>
+     
+    </div>
+
+	
+</div>
+<div >
+    
+</div>
+</body></html>
