@@ -1,5 +1,5 @@
 <? php
-//Firename:conn.php
+//Filename:conn.php
 //header("Content-Type:text/html;charset=utf-8");
 //header("Content-Type:text/html;charset=gb2312");
 $mysql_server_name="localhost:3306"; //mysql数据库服务器
