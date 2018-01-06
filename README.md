@@ -1,4 +1,5 @@
 # EDRIMS
+2015-03
 
 Develop Environment 
 
@@ -64,15 +65,20 @@ default-character-set = gbk
 @@@@@消除简体中文乱码@@@@@
 
 @所有HTML网页编码均为UTF-8
+
 @所有php文件Header头都声明为UTF-8
 	header("Content-Type:text/html;charset=utf-8");	
+	
 @所有MySQL字符设置都为gbk,仅MySQL系统默认为UTF-8 
+
 @phpMyAdmin连接校对为gbk_ chinese_ci，整理为gbk_ chinese_ci
+
 @所有php文件加上下面四句话
 	mysql_query("SET NAMES UTF8");//设置中文字符集
 	mysql_query('set character_set_client = utf8');
 	mysql_query('set character_set_connection = GBK');
 	mysql_query('set character_set_results = utf8');
+	
 @数据库引擎为InnoDB，表的引擎也是InnoDB
 
 [client]
