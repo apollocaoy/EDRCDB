@@ -1,6 +1,5 @@
 # EDRIMS
 PaulTsao
-2015-03
 
 This project established the B/S mode earthquake & disasters resistance information management system (EDRIMS) via AppServ. It based on CBR theory model and used  some related programming languages and tools, such as PHP, HTML ,JavaScript, CSS, Dreamware, Sublime text 2, etc. In the course of the project, the earthquake & disasters resistance case database(RERCDB) based on MySQL database  had been constructed.The tested system can be enabled to realize the main four function: case retrieval, case reuse, case revise and case retaining and create, insert, select and delete specific case information by RERCDB via browsers.
 
