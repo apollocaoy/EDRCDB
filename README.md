@@ -79,8 +79,7 @@ Other Configration:
 
 
 
-IN CHINESE
-
+# IN CHINESE
 
 
 ！！ ------------------------------------------------------------------------------------ ！！
@@ -91,6 +90,7 @@ Please refer to the detailed illustrate:
 
 https://wenku.baidu.com/view/2d20321e852458fb760b5641
 
+！！ ------------------------------------------------------------------------------------ ！！
 
 the key poit:
 
@@ -129,40 +129,32 @@ the key poit:
 	default-character-set = gbk
 	
 
-！！ ------------------------------------------------------------------------------------ ！！
 
 
+# IN ENGLISH
 
-IN ENGLISH
-
-
-
-！！ ------------------------------------------------------------------------------------ ！！
 
 # SERVER SECTION
 
 #
-# The following options will be read by the MySQL Server. Make sure that
-# you have installed the server correctly (see above) so it reads this 
-# file.
+The following options will be read by the MySQL Server. Make sure that you have installed the server correctly (see above) so it reads this file.
 #
 
 [mysqld]
 
-# The TCP/IP Port the MySQL Server will listen on
+@ The TCP/IP Port the MySQL Server will listen on
 	
 	port=3306
 
-#Path to installation directory. All paths are usually resolved relative to this.
+@ Path to installation directory. All paths are usually resolved relative to this.
 
 	basedir="A:\AppServ/MySQL"
 
-#Path to the database root
+@Path to the database root
 
 	datadir="A:\AppServ/MySQL/data/"
 
-# The default character set that will be used when a new schema or table is
-# created and no character set is defined
+@The default character set that will be used when a new schema or table is created and no character set is defined
 
 	default-character-set = gbk
 
@@ -174,12 +166,11 @@ IN ENGLISH
 
 	init_connect = 'SET NAMES gbk'
 
-# The default storage engine that will be used when create new tables when
+@ The default storage engine that will be used when create new tables when
 
 	default-storage-engine=INNODB
 	
-# The default character set that will be used phpMyAdmin  
+@ The default character set that will be used in phpMyAdmin  
 
 	ALTER DATABASE `caoyong` DEFAULT CHARACTER SET gb2312 COLLATE gb2312_chinese_ci;
-	
-！！ -------------------------------------------------------------------------------------- ！！
+
