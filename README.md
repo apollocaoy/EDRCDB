@@ -1,7 +1,7 @@
 # EDRIMS
 PaulTsao
 
-@@@ overview @@@
+# overview 
 
 This project established the B/S mode Earthquake & Disasters Resistance Information Management System (EDRIMS) . 
 
@@ -9,10 +9,11 @@ It based on CBR(Case-based Reasoning) theory and used several related programmin
 
 The tested system can be enabled to realize the main four functions of CBR: case retrieval, case reuse, case revise and case retaining, and can create, insert, select and delete specific case information via browsers.
 
-@@@ AppServ DevEnv @@@
+#  DevEnv AppServ
 
+#
 AppServ 2.5.10
-
+#
 	Apache 2.2.8
 
 	PHP 5.2.6
@@ -26,9 +27,9 @@ Sourceforge.net : http://prdownloads.sourceforge.net/appserv/appserv-win32-2.5.1
 
 MD5SUM : 279c0c39866fbecb8a3904969fd5d0f4
 
-
+#
 AppServ 2.6.0
-
+#
 	Apache 2.2.8
 
 	PHP 6.0.0-dev
@@ -42,21 +43,23 @@ Sourceforge.net : http://prdownloads.sourceforge.net/appserv/appserv-win32-2.6.0
 
 MD5SUM : e3a108c9b17f3572e53c07f52d236481
 
+#
 
-@@@ System Configration @@@
+# System Configration 
 
+#
 AppServe  Configuration：
 
 	gbk_simplified chinese
 	
 	enabled：InnoDB ： 勾选（Yes）
-
+#
 MySQL & phpMyAdmin Configuration：
 
 	根用户：root
 
 	根密码：123
-
+#
 Other Configration:
 
 [client]
@@ -66,8 +69,8 @@ Other Configration:
 [mysql]
 
 	default-character-set = gbk
-
-@@@ MySQl Common Command @@@
+#
+# MySQl Common Command 
 
 	SHOW variables like "char_%";    # 在命令行查看字符集设置
 	
@@ -75,14 +78,13 @@ Other Configration:
 	
 	select @@version;  # 查看版本信息
 
-@@@ solve the problem of simple-Chinese Character string confused @@@
+# solve the problem of simple-Chinese Character string confused 
 
+#
+ IN CHINESE
+#
 
-
-# IN CHINESE
-
-
-！！ ------------------------------------------------------------------------------------ ！！
+#
 
 Please refer to the detailed illustrate:
 
@@ -90,7 +92,7 @@ Please refer to the detailed illustrate:
 
 https://wenku.baidu.com/view/2d20321e852458fb760b5641
 
-！！ ------------------------------------------------------------------------------------ ！！
+#
 
 the key poit:
 
@@ -128,14 +130,12 @@ the key poit:
 
 	default-character-set = gbk
 	
-
-
-
-# IN ENGLISH
-
-
-# SERVER SECTION
-
+#
+ IN ENGLISH
+#
+#
+ SERVER SECTION
+#
 #
 The following options will be read by the MySQL Server. Make sure that you have installed the server correctly (see above) so it reads this file.
 #
@@ -169,8 +169,11 @@ The following options will be read by the MySQL Server. Make sure that you have 
 @ The default storage engine that will be used when create new tables when
 
 	default-storage-engine=INNODB
-	
+
+[phpMyAdmin]
+
 @ The default character set that will be used in phpMyAdmin  
 
 	ALTER DATABASE `caoyong` DEFAULT CHARACTER SET gb2312 COLLATE gb2312_chinese_ci;
 
+#
